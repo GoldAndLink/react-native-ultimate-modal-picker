@@ -38,7 +38,7 @@ const ListPicker = (props: Props) => {
       setItem(props.defaultValue);
     }
     else {
-      setItem('Select');
+      setItem('Selectionner');
     }
   }, []);
 
@@ -121,7 +121,7 @@ const ListPicker = (props: Props) => {
           </View>
 
           <TouchableOpacity onPress={() => toggleModal()} style={styles.fieldTextContainer}>
-            <Text style={styles.fieldText} numberOfLines={1}>{item ? item : 'Select'}</Text>
+            <Text style={styles.fieldText} numberOfLines={1}>{item ? item : 'Selectionner'}</Text>
           </TouchableOpacity>
 
           <Modal
@@ -190,7 +190,7 @@ const ListPicker = (props: Props) => {
 const styles = StyleSheet.create({
   container: {
     display: 'flex',
-    width: width,
+    width: props.width || width,
     paddingLeft: 16,
     paddingRight: 16,
     backgroundColor: colorScheme === 'dark' ? '#000000' : '#FFFFFF',
